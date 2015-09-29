@@ -93,7 +93,7 @@
         //
         // Pass through any requests made from files which are in the "App" folder.
         //
-        $httpBackend.whenGET(/app/).passThrough();
+        $httpBackend.whenGET(/Views/).passThrough();
     });
 
 }());
