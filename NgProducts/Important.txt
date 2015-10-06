@@ -1,0 +1,16 @@
+Built in angular services for calling a web service
+
+1.	$http
+	-	It's a core angular service which can be used to call web services.
+
+2.	$resource
+	-	It's a built in factory which creates a resource object which can be used to interact with the web service.
+	-	This works only with RESTful services.
+	-	Have built in methods which can be used to interact with the services easily.
+		- get, query, save
+
+3.	The "$resource" is defined in the angular "ngResource" module. Since this is a module; which is not included in the core angular module, it needs to be downloaded separately.
+	Since this module is optional, when using it in a module, it needs to be defined as a dependency.
+
+
+NOTE: To intercept the HTTP calls (to mock) there's a service called $httpBackend

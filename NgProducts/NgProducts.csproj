@@ -63,6 +63,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Important.txt" />
     <Content Include="Scripts\Lib\angular-ui-router.js" />
     <Content Include="Scripts\Lib\angular-ui-router.min.js" />
     <Content Include="packages.config" />
