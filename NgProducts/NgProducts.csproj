@@ -65,7 +65,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\Lib\angular-ui-router.js" />
     <Content Include="Scripts\Lib\angular-ui-router.min.js" />
-    <Content Include="Views\Index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\Common\Services\productResource.js" />
     <Content Include="Scripts\Common\Services\productResourceMock.js" />
@@ -90,6 +89,7 @@
     <Content Include="Scripts\Lib\angular-mocks.js" />
     <Content Include="Scripts\Lib\jquery-2.1.4.js" />
     <Content Include="Scripts\Lib\jquery-2.1.4.min.js" />
+    <Content Include="Views\Index.html" />
     <Content Include="Views\Products\productListView.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Lib\jquery-2.1.4.min.map" />
