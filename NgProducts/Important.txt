@@ -7,10 +7,36 @@ Built in angular services for calling a web service
 	-	It's a built in factory which creates a resource object which can be used to interact with the web service.
 	-	This works only with RESTful services.
 	-	Have built in methods which can be used to interact with the services easily.
-		- get, query, save
+		- get, query, save, delete and remove ('remove' is used synomysously with delete because delete is a keyword in java-script)
 
-3.	The "$resource" is defined in the angular "ngResource" module. Since this is a module; which is not included in the core angular module, it needs to be downloaded separately.
+	The "$resource" is defined in the angular "ngResource" module. Since this is a module which is not included in the core angular module, it needs to be downloaded separately.
 	Since this module is optional, when using it in a module, it needs to be defined as a dependency.
 
 
-NOTE: To intercept the HTTP calls (to mock) there's a service called $httpBackend
+
+NOTE: 
+	-	$httpBackend
+		-	To intercept the HTTP calls (to mock) there's a service called. This is suitable to intercept HTTP requests when either $http pr $resource angular services are used. 
+		-	It basically mocks the calls to the web service.
+		-	Returns static data to the application.
+		-	There are 2 implementations of this,
+			-	ngMock - This is used for unit testing.
+			-	ngMockE2E - For end to end testing, or backend less development.
+		-	Steps to mock the web server
+			-	Download ngMockE2E module.
+			-	Create a new module which depends on ngMockE2E.
+			-	Setup the static data.
+			-	Define the fake responses to the web server calls.
+			-	Add the new dependency as a dependency in the main module.
+
+		-	This is the flow which happens,
+			-	The "productController" calls the "query" method of the "productResource" service, and this service is sending a RESTful call to the defined web service.
+			-	Since we are using $httpBackend to intercept the HTTP calls, when it receives this URL pattern it sends the designated response as it were coming from the actual web service call.
+		
+		-	An important note is that $httpBackend will intercept ALL HTTP calls, unless we say so.
+			
+	-	When registering a factory in a module, 
+		-	The first parameter is the name of the factory.
+		-	The second parameter is an array, which are the string names which are passed to the function.
+		-	The last parameter in the array, is the function reference which defines the factory's functionality.
+

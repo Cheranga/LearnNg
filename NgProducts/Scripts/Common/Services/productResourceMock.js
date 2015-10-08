@@ -3,8 +3,14 @@
 
     var app = angular.module("productResourceMock", ["ngMockE2E"]);
 
+    //
+    // The app.run call initializes the module. The passed function to the "run" method will be executed once the module has been loaded.
+    //
     app.run(function ($httpBackend) {
 
+        //
+        // Defining the set of static data
+        //
         var products = [
             {
                 "productId": 1,
@@ -31,7 +37,9 @@
                 "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
             }
         ];
-
+        //
+        // The url which we're trying to intercept
+        //
         var productUrl = "/api/products";
         //
         // Mock GET all products
