@@ -19,6 +19,9 @@
         "$urlRouterProvider",
         function ($stateProvider, $urlRouterProvider) {
 
+            //
+            // $urlRouterProvider depends on the URL to activate the state. So remember to specify the URL, NOT the actual applciation state
+            //
             $urlRouterProvider.otherwise("/");
             
             $stateProvider.state("home",
