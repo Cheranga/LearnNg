@@ -12,32 +12,33 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <table ng-controller="ProductListController as vm" class="table table-bordered table-hover table-condensed table-striped">
-                    <thead>
-                        <tr>
-                            <th class="col-sm-1">
-                                <button class="btn btn-primary" ng-click="vm.toggleImage()">
-                                    <i class="glyphicon glyphicon-camera"></i>&nbsp;{{vm.showImage? "Hide Image" : "Show Image"}}
-                                </button>
-                            </th>
-                            <th class="col-sm-4">Product</th>
-                            <th class="col-sm-4">Code</th>
-                            <th class="col-sm-2">Available</th>
-                            <th class="col-sm-1">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="product in vm.products">
-                            <td>
-                                <img class="productImg thumbnail" ng-if="vm.showImage" ng-src="{{product.imageUrl}}" />
-                            </td>
-                            <td>{{product.productName}}</td>
-                            <td>{{product.productCode}}</td>
-                            <td>{{product.releaseDate}}</td>
-                            <td>{{product.price | currency}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div data-ui-view></div>
+                <!--<table ng-controller="ProductListController as vm" class="table table-bordered table-hover table-condensed table-striped">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-1">
+                                    <button class="btn btn-primary" ng-click="vm.toggleImage()">
+                                        <i class="glyphicon glyphicon-camera"></i>&nbsp;{{vm.showImage? "Hide Image" : "Show Image"}}
+                                    </button>
+                                </th>
+                                <th class="col-sm-4">Product</th>
+                                <th class="col-sm-4">Code</th>
+                                <th class="col-sm-2">Available</th>
+                                <th class="col-sm-1">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="product in vm.products">
+                                <td>
+                                    <img class="productImg thumbnail" ng-if="vm.showImage" ng-src="{{product.imageUrl}}" />
+                                </td>
+                                <td>{{product.productName}}</td>
+                                <td>{{product.productCode}}</td>
+                                <td>{{product.releaseDate}}</td>
+                                <td>{{product.price | currency}}</td>
+                            </tr>
+                        </tbody>
+                    </table>-->
             </div>
         </div>
     </div>

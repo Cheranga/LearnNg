@@ -40,3 +40,46 @@ NOTE:
 		-	The second parameter is an array, which are the string names which are passed to the function.
 		-	The last parameter in the array, is the function reference which defines the factory's functionality.
 
+
+3.	Routing
+	-	Is a technique to navigate between the views.
+	-	Each route represents a specific view.
+
+	3.1	Routing frameworks
+		-	ngRoute
+			-	angular-route.js
+			-	Based on URL fragment identifiers.
+			-	Each route has,
+				-	URL fragment identifier
+				-	View template
+				-	Optional controller
+			-	This is good for basic angular applications which doesn't include complex navigation structures as nested views.
+
+		-	UI Router
+			This is much more complicated, full featured framework.
+			-	3rd party download (from GITHUB) (angular-ui-router.js)
+			-	Based on "Application States".
+			-	Each state has,
+				-	Optional URL fragment identifier.
+				-	View Template.
+				-	Optional Controller
+				-	Additional attached behaviour as pre-loading data.
+			-	This is good for more granular level of business angular applications
+
+			-	Setting up ui-router
+				-	Download angular-ui-router.js
+				-	Set this module as a dependency for the main module.
+				-	Set the layout view to specify where the views should appear (using ui-view or data-ui-view attribute)
+				-	Identify the route states, and define them in code.
+				-	The routes are configured, via the ui-router's "$stateProvider" service.
+				-	To provide a default application state we can use the "$urlRouterProvider" service.
+					-	It watches the "$location" for changes in the URL.
+					-	When "$location" changes, it finds a matching state, and if found it activates that state.
+					-	Using the "otherwise" method of $urlRouterProvider, we can setup a default application state.
+
+	3.2	Activating routes
+		-	Set the URL.
+		-	Using code.
+			$state.go('productList') - This activates the defined state.
+		-	Click a link with "ui-sref" directive.
+			<a ui-sref="productList"> Product List </a> - This will activate the defined state.

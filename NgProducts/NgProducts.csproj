@@ -92,6 +92,7 @@
     <Content Include="Scripts\Lib\jquery-2.1.4.min.js" />
     <Content Include="Views\Index.html" />
     <Content Include="Views\Products\productListView.html" />
+    <Content Include="Views\welcomeview.html" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Lib\jquery-2.1.4.min.map" />
   </ItemGroup>
