@@ -20,30 +20,30 @@
         function ($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise("/");
-
-            //
-            // Home route
-            //
+            
             $stateProvider.state("home",
             {
+                //
+                // Home route
+                //
                 url: "/",
                 templateUrl: "/Views/welcomeView.html" //This path is case sensitive
                 
-            });
-            //
-            // Product list route
-            //
-            $stateProvider.state("productList",
+            })
+            .state("productList",
             {
+                //
+                // Product list route
+                //
                 url: "/products",
                 templateUrl: "/Views/Products/productListView.html", //This path is case sensitive
                 controller:"ProductListController as vm"
-            });
-            //
-            // Edit product route
-            //
-            $stateProvider.state("productEdit",
+            })
+            .state("productEdit",
             {
+                //
+                // Edit product route
+                //
                 url: "/products/edit/:productId",
                 templateUrl: "/Views/Products/productEditView.html", //This path is case sensitive
                 controller: "ProductEditController as vm"
