@@ -55,7 +55,6 @@
                 productId: 0
             };
 
-            debugger;
             var urlSegments = url.split("/");
             var idSegment = urlSegments[urlSegments.length - 1];
 

@@ -83,3 +83,19 @@ NOTE:
 			$state.go('productList') - This activates the defined state.
 		-	Click a link with "ui-sref" directive.
 			<a ui-sref="productList"> Product List </a> - This will activate the defined state.
+
+
+4.	Resolve
+
+	-	A property attached to a route via $state.
+	-	Can provide the controller with data.
+	-	Identifies dependencies.
+	-	Defined with key/value pairs.
+
+5.	Abstract State
+	-	Is a configuration property of $state.
+	-	Is a state which cannot be explicitly activated.
+	-	Activation attempt throws an exception.
+	-	Activated implicitly when a "child" state is activated.
+	
+

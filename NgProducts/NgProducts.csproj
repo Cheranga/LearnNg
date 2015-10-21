@@ -64,6 +64,8 @@
     <Content Include="Content\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Important.txt" />
+    <Content Include="Scripts\App\products\productDetailController.js" />
+    <Content Include="Scripts\App\products\productEditController.js" />
     <Content Include="Scripts\Lib\angular-ui-router.js" />
     <Content Include="Scripts\Lib\angular-ui-router.min.js" />
     <Content Include="packages.config" />
@@ -91,6 +93,11 @@
     <Content Include="Scripts\Lib\jquery-2.1.4.js" />
     <Content Include="Scripts\Lib\jquery-2.1.4.min.js" />
     <Content Include="Views\Index.html" />
+    <Content Include="Views\Products\productDetailView.html" />
+    <Content Include="Views\Products\productEditInfoView.html" />
+    <Content Include="Views\Products\productEditPriceView.html" />
+    <Content Include="Views\Products\productEditTagsView.html" />
+    <Content Include="Views\Products\productEditView.html" />
     <Content Include="Views\Products\productListView.html" />
     <Content Include="Views\welcomeview.html" />
     <Content Include="Web.config" />

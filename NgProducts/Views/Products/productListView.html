@@ -1,27 +1,46 @@
-﻿<table class="table table-bordered table-hover table-condensed table-striped">
-        <thead>
-            <tr>
-                <th class="col-sm-1">
-                    <button class="btn btn-primary" ng-click="vm.toggleImage()">
-                        <i class="glyphicon glyphicon-camera"></i>&nbsp;{{vm.showImage? "Hide Image" : "Show Image"}}
-                    </button>
-                </th>
-                <th class="col-sm-4">Product</th>
-                <th class="col-sm-4">Code</th>
-                <th class="col-sm-2">Available</th>
-                <th class="col-sm-1">Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="product in vm.products">
-                <td>
-                    <img class="productImg thumbnail" ng-if="vm.showImage" ng-src="{{product.imageUrl}}" />
-                </td>
-                <td>{{product.productName}}</td>
-                <td>{{product.productCode}}</td>
-                <td>{{product.releaseDate}}</td>
-                <td>{{product.price | currency}}</td>
-            </tr>
-        </tbody>
-    </table>
+﻿<div class="panel panel-info">
+    <div class="panel-heading">
+        <h1 class="panel-title">Products</h1>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-hover table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th class="col-sm-1">
+                        <button class="btn btn-primary" ng-click="vm.toggleImage()">
+                            <i class="glyphicon glyphicon-camera"></i>&nbsp;{{vm.showImage? "Hide Image" : "Show Image"}}
+                        </button>
+                    </th>
+                    <th class="col-sm-4">Product</th>
+                    <th class="col-sm-4">Code</th>
+                    <th class="col-sm-2">Available</th>
+                    <th class="col-sm-1">Price</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in vm.products">
+                    <td>
+                        <img class="productImg thumbnail" ng-if="vm.showImage" ng-src="{{product.imageUrl}}" />
+                    </td>
+                    <td>
+                        <a ui-sref="productDetail({productId:product.productId})">
+                            {{product.productName}}
+                        </a>
+                    </td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.releaseDate}}</td>
+                    <td>{{product.price | currency}}</td>
+                    <td>
+                        <a class="btn btn-warning" ui-sref="productEdit.info({productId:product.productId})">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 
